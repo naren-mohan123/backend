@@ -43,6 +43,10 @@ dishRouter.route("/")
     .catch((err) => next(err));
 });
 
+
+
+
+
 dishRouter.route("/:dishId")
 .get( (req,res,next) => {
     Dishes.findById(req.params.dishId)
@@ -78,6 +82,11 @@ dishRouter.route("/:dishId")
     }, (err) => next(err))
     .catch((err) => next(err));
 });
+
+
+
+
+
 
 dishRouter.route("/:dishId/comments")
 .get((req,res,next) => {
